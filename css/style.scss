@@ -1,0 +1,665 @@
+@import "app.scss";
+
+.wrapper {
+  position: relative;
+  .inner-wrapper {
+    position: relative;
+    nav {
+      @include sections-gutters;
+      background-color: $primary-color;
+      .navbar-outer {
+        @include media-desktop(sm-screen) {
+          flex-direction: column;
+          justify-content: center;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navbar-logo {
+          @include media-desktop(xxxl-screen) {
+            font-size: $xxxl-text;
+          }
+          @include media-screens(medium-desktop) {
+            font-size: $xxl-text;
+          }
+          color: $white-color;
+          font-size: $lg-text1;
+        }
+      }
+      .navbar-outer .navbar-items {
+        .menu-items {
+          display: flex;
+          list-style-type: none;
+          align-items: center;
+        }
+        .menu-items .list-menu-items {
+          @include media-desktop(xxxl-screen) {
+            padding-inline: 25px;
+          }
+          @include media-screens(medium-desktop) {
+            padding-inline: 20px;
+          }
+          @include media-desktop(xl-screen) {
+            padding-inline: 10px;
+          }
+          @include media-desktop(lg-screen) {
+            padding-inline: 8px;
+          }
+          @include media-desktop(sm-screen) {
+            padding-inline: 5px;
+          }
+          padding-inline: 15px;
+          &:first-child {
+            padding-inline-start: 0;
+          }
+          &:last-child {
+            padding-inline-end: 0;
+          }
+          a {
+            @include media-desktop(xxxl-screen) {
+              font-size: $lg-text2;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $lg-text1;
+            }
+            @include media-desktop(xl-screen) {
+              font-size: $md-text;
+            }
+            @include media-desktop(lg-screen) {
+              font-size: $small-text;
+            }
+            @include media-desktop(sm-screen) {
+              font-size: $ex-small-text;
+            }
+            color: $white-color;
+            font-family: "Gilroy-Light" !important;
+            .primary-btn {
+              @include media-desktop(xxxl-screen) {
+                padding: 10px 45px;
+                margin-top: -8px;
+                font-size: $lg-text;
+              }
+              @include media-screens(medium-desktop) {
+                padding: 8px 35px;
+                margin-top: -8px;
+                font-size: $default-text;
+              }
+              padding: 5px 25px;
+              font-size: $md-text;
+              margin-top: -10px;
+            }
+          }
+        }
+      }
+    }
+    header {
+      @include sections-gutters;
+      background-image: url("../images/header-bg.png");
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      padding-top: 80px;
+      .header-area {
+        .row {
+          align-items: center;
+          .col-md-6 {
+            text-align: left;
+          }
+          .left-area {
+            color: $white-color;
+            h1 {
+            }
+            p {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text;
+                margin-bottom: 50px;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $default-text;
+                margin-bottom: 40px;
+              }
+              font-size: $md-text;
+              margin-bottom: 30px;
+            }
+            button {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text2;
+                padding: 15px 50px;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text1;
+                padding: 15px 50px;
+              }
+              display: flex;
+              align-items: center;
+              font-size: $default-text;
+              .fa-caret-right {
+                font-size: $xxl-text;
+                padding-left: 10px;
+              }
+            }
+          }
+          .img-area {
+            img {
+              @include media-desktop(xxxl-screen) {
+                width: 850px;
+              }
+              @include media-screens(medium-desktop) {
+                width: 750px;
+              }
+              width: 550px;
+            }
+          }
+        }
+      }
+    }
+    .checklist {
+      @include sections-gutters;
+      background-color: $bg-color1;
+      .row {
+        padding: 40px 0;
+        .inner-checklist {
+          ul {
+            @include media-desktop(xxxl-screen) {
+              margin-top: 60px;
+            }
+            @include media-screens(medium-desktop) {
+              margin-top: 50px;
+            }
+            list-style-type: none;
+            margin-top: 30px;
+            li {
+              @include media-desktop(xxxl-screen) {
+                line-height: 50px;
+              }
+              @include media-screens(medium-desktop) {
+                line-height: 40px;
+              }
+              line-height: 30px;
+            }
+            li .icon-tick {
+              @include media-desktop(xxxl-screen) {
+                padding-inline-end: 45px;
+              }
+              @include media-screens(medium-desktop) {
+                padding-inline-end: 35px;
+              }
+              padding-inline-end: 25px;
+              i {
+                @include media-desktop(xxxl-screen) {
+                  font-size: $xl-text;
+                }
+                @include media-screens(medium-desktop) {
+                  font-size: $lg-text3;
+                }
+                color: $green-color;
+              }
+            }
+            li .checklist-text {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text1;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text;
+              }
+              color: $primary-color;
+              font-size: $default-text;
+              font-weight: $bold;
+            }
+          }
+        }
+      }
+    }
+    .our-projects {
+      @include sections-gutters;
+      background-color: $primary-color;
+      padding-block: 50px;
+      .row .col-12 {
+        color: $white-color;
+        p {
+          @include media-desktop(xxxl-screen) {
+            font-size: $lg-text3;
+          }
+          @include media-screens(medium-desktop) {
+            font-size: $lg-text2;
+          }
+          font-size: $default-text;
+        }
+      }
+      .projects-images {
+        @include media-desktop(xxxl-screen) {
+          justify-content: center;
+        }
+        @include media-screens(medium-desktop) {
+          justify-content: center;
+        }
+        padding-inline: 100px;
+
+        .image-outer {
+          color: $white-color;
+          .sm-img {
+            @include media-desktop(xxxl-screen) {
+              width: 90%;
+            }
+            @include media-screens(medium-desktop) {
+              width: 85%;
+            }
+            width: 80%;
+          }
+          .lg-img {
+            @include media-desktop(xxxl-screen) {
+              width: 95%;
+            }
+            @include media-screens(medium-desktop) {
+              width: 95%;
+            }
+            width: 90%;
+          }
+        }
+      }
+    }
+    .faqs-section {
+      @include media-desktop(xxxl-screen) {
+        padding-block: 130px;
+      }
+      @include media-screens(medium-desktop) {
+        padding-block: 120px;
+      }
+      @include sections-gutters;
+      padding-right: 0 !important;
+      padding-block: 80px;
+      background-color: $bg-color2;
+      .row {
+        @include media-desktop(xxxl-screen) {
+          margin-block-end: 90px;
+        }
+        @include media-screens(medium-desktop) {
+          padding-block: 80px;
+        }
+        position: relative;
+        margin-block-end: 30px;
+        .inner-text {
+          color: $white-color;
+          h2 {
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            span {
+              line-height: 40px;
+              color: $green-color;
+            }
+          }
+          p {
+            @include media-desktop(xxxl-screen) {
+              font-size: $lg-text1;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $lg-text;
+            }
+            font-size: $md-text;
+            a {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text1;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text;
+              }
+              font-size: $small-text;
+              color: $white-color;
+            }
+          }
+        }
+        .img-area {
+          img {
+            position: absolute;
+          }
+          .img-1 {
+            @include media-desktop(xxxl-screen) {
+              width: 50%;
+              left: 180px;
+            }
+            @include media-screens(medium-desktop) {
+              width: 48%;
+              left: 180px;
+            }
+            left: 50px;
+            width: 55%;
+          }
+          .img-2 {
+            @include media-desktop(xxxl-screen) {
+              width: 50%;
+              top: -30px;
+            }
+            @include media-screens(medium-desktop) {
+              width: 50%;
+              top: -30px;
+            }
+            right: 15px;
+            width: 58%;
+            top: -38px;
+          }
+        }
+      }
+    }
+    .services-section {
+      @include sections-gutters;
+      padding-block: 50px;
+      .row {
+        .inner-services {
+          @include media-desktop(xxxl-screen) {
+            align-items: center;
+          }
+          @include media-screens(medium-desktop) {
+            align-items: center;
+          }
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          padding-block: 30px;
+          .img-icon {
+            @include media-desktop(xxxl-screen) {
+              height: 160px;
+            }
+            @include media-screens(medium-desktop) {
+              height: 150px;
+            }
+            height: 120px;
+            img {
+              @include media-desktop(xxxl-screen) {
+                width: 90%;
+              }
+              @include media-screens(medium-desktop) {
+                width: 80%;
+              }
+              width: 60%;
+            }
+          }
+          .text-area {
+            @include media-desktop(xxxl-screen) {
+              margin-top: 60px;
+            }
+            @include media-screens(medium-desktop) {
+              margin-top: 50px;
+            }
+            margin-top: 30px;
+            text-align: center;
+            h5 {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text3;
+                margin-top: 25px;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text2;
+                margin-top: 20px;
+              }
+              color: $primary-color;
+              font-size: $lg-text;
+              font-weight: $bold;
+              margin-top: 15px;
+            }
+            small {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $default-text;
+              }
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    .steps-section {
+      @include sections-gutters;
+      padding-block: 50px;
+      background: linear-gradient(139deg, #6184d8 0%, $primary-color 100%) 0% 0%;
+      opacity: 0.9;
+      h2 {
+        color: $white-color;
+      }
+      .row {
+        @include media-desktop(xxxl-screen) {
+          margin-top: 60px;
+        }
+        @include media-screens(medium-desktop) {
+          margin-top: 50px;
+        }
+        margin-top: 30px;
+        .inner-steps {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          .left-area {
+            small {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text2;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text1;
+              }
+              color: $green-color;
+              text-transform: uppercase;
+            }
+            h4 {
+              @include media-desktop(xxxl-screen) {
+                font-size: $xl-text;
+                margin-bottom: 30px;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text3;
+                margin-bottom: 25px;
+              }
+              color: $white-color;
+              margin-bottom: 20px;
+            }
+            p {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $default-text;
+              }
+              color: $white-color;
+              font-size: $md-text;
+            }
+            .icon-down {
+              @include media-desktop(xxxl-screen) {
+                margin-top: 50px;
+              }
+              @include media-screens(medium-desktop) {
+                margin-top: 40px;
+              }
+              margin-top: 30px;
+              .fa-chevron-circle-down {
+                @include media-desktop(xxxl-screen) {
+                  font-size: $header-h2;
+                }
+                @include media-screens(medium-desktop) {
+                  font-size: $header-h3;
+                }
+                font-size: $xxxl-text;
+                color: rgba($primary-color, 0.7);
+              }
+            }
+          }
+          .right-area {
+            .image-icons {
+              background: linear-gradient(328deg, #4d80fb 0%, $green-color 100%)
+                0% 0%;
+              padding: 20px;
+              border-radius: 50%;
+              img {
+                @include media-desktop(xxxl-screen) {
+                  width: 50px;
+                }
+                @include media-screens(medium-desktop) {
+                  width: 40px;
+                }
+                width: 30px;
+              }
+            }
+          }
+        }
+
+        .steps-bottom-area {
+          @include media-desktop(xxxl-screen) {
+            padding: 50px 80px;
+          }
+          @include media-screens(medium-desktop) {
+            padding: 40px 70px;
+          }
+          padding: 30px 50px;
+          color: $white-color;
+          .steps-inner-bottom {
+            @include media-desktop(xxxl-screen) {
+              padding: 50px 80px;
+            }
+            @include media-screens(medium-desktop) {
+              padding: 40px 70px;
+            }
+            border: 1px solid $white-color;
+            border-radius: 20px;
+            padding: 30px 50px;
+            p {
+              @include media-desktop(xxxl-screen) {
+                font-size: $lg-text2;
+              }
+              @include media-screens(medium-desktop) {
+                font-size: $lg-text1;
+              }
+            }
+          }
+        }
+      }
+    }
+    .schedule-section {
+      @include media-desktop(xxxl-screen) {
+        padding-block: 80px;
+      }
+      @include media-screens(medium-desktop) {
+        padding-block: 70px;
+      }
+      @include sections-gutters;
+      color: $white-color;
+      padding-block: 50px;
+      background: url("../images/Group 2110.png");
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .row {
+        .col-md-7 {
+          h2 {
+            color: $white-color;
+            margin-bottom: 20px;
+            span {
+              color: $green-color;
+            }
+          }
+          p {
+            @include media-desktop(xxxl-screen) {
+              font-size: $lg-text1;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $lg-text;
+            }
+            font-size: $md-text;
+            margin-bottom: 30px;
+          }
+          button {
+            @include media-desktop(xxxl-screen) {
+              font-size: $lg-text2;
+              padding: 15px 50px;
+            }
+            @include media-screens(medium-desktop) {
+              font-size: $lg-text1;
+              padding: 15px 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    @include sections-gutters;
+    @include media-desktop(xxxl-screen) {
+      padding-block: 70px;
+    }
+    @include media-screens(medium-desktop) {
+      padding-block: 60px;
+    }
+    padding-block: 40px;
+    background: url("../images/Group 2176.png");
+    background-position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .top-section {
+      color: $white-color;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      h6 {
+        @include media-desktop(xxxl-screen) {
+          font-size: $lg-text1;
+        }
+        @include media-screens(medium-desktop) {
+          font-size: $lg-text;
+        }
+      }
+      .left {
+        small,
+        address {
+          @include media-desktop(xxxl-screen) {
+            font-size: $default-text;
+            line-height: 30px;
+          }
+          @include media-screens(medium-desktop) {
+            font-size: $md-text;
+            line-height: 25px;
+          }
+          font-weight: $normal;
+          font-size: $small-text;
+          line-height: 20px;
+        }
+        i {
+          padding-left: 15px;
+        }
+      }
+      .right {
+        .social-icons {
+          a {
+            &:last-child {
+              padding-inline-end: 0;
+            }
+            padding-inline: 5px;
+          }
+          a > img {
+            @include media-desktop(xxxl-screen) {
+              height: 30px;
+            }
+            @include media-screens(medium-desktop) {
+              height: 25px;
+            }
+            height: 20px;
+          }
+        }
+      }
+    }
+    .bottom-privacy {
+      a {
+        @include media-desktop(xxxl-screen) {
+          font-size: $lg-text1;
+        }
+        @include media-screens(medium-desktop) {
+          font-size: $lg-text;
+        }
+        font-size: $md-text;
+        padding-inline: 15px;
+        color: $white-color;
+        &:last-child {
+          padding-inline-end: 0;
+        }
+      }
+    }
+  }
+}
